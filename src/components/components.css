@@ -1,0 +1,253 @@
+.kf-stat-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.kf-stat-bar__label {
+  width: 34px;
+  color: var(--kf-ink-dim);
+  text-align: right;
+}
+
+.kf-stat-bar__track {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.kf-stat-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--kf-gold), var(--kf-gold-soft));
+}
+
+.kf-character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--kf-panel);
+  border: 1px solid var(--kf-border);
+  width: 100%;
+}
+
+.kf-character-card--selected {
+  border-color: var(--kf-gold);
+  box-shadow: 0 0 0 2px var(--kf-gold) inset;
+}
+
+.kf-character-card canvas {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 70%);
+  border-radius: 10px;
+}
+
+.kf-character-card__tagline {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.kf-character-card__stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 4px 0;
+}
+
+.kf-character-card__special {
+  font-size: 13px;
+  color: var(--kf-gold-soft);
+}
+
+.kf-character-card__special-desc {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.kf-character-card__picked-by {
+  font-size: 12px;
+  color: var(--kf-gold);
+}
+
+.kf-pick-btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--kf-border);
+  background: transparent;
+  color: var(--kf-ink-dim);
+  cursor: pointer;
+}
+
+.kf-pick-btn--active {
+  background: var(--kf-gold);
+  color: #241a05;
+  border-color: var(--kf-gold);
+}
+
+.kf-mode-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: var(--kf-panel);
+  border: 1px solid var(--kf-border);
+  color: var(--kf-ink);
+  cursor: pointer;
+  text-align: left;
+  min-width: 200px;
+}
+
+.kf-mode-card:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.kf-mode-card:not(:disabled):hover {
+  border-color: var(--kf-gold);
+}
+
+.kf-hud {
+  width: min(1100px, 94%);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.kf-hud__player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kf-hud__player--right {
+  align-items: flex-end;
+}
+
+.kf-health-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kf-health-bar--right {
+  align-items: flex-end;
+}
+
+.kf-health-bar__label {
+  font-size: 13px;
+  color: var(--kf-gold-soft);
+}
+
+.kf-health-bar__track {
+  width: 100%;
+  height: 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--kf-border);
+  overflow: hidden;
+}
+
+.kf-health-bar--right .kf-health-bar__track {
+  direction: rtl;
+}
+
+.kf-health-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #f3c969);
+  transition: width 0.15s linear;
+}
+
+.kf-hud__timer {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--kf-gold-soft);
+  min-width: 40px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.kf-special-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kf-special-bar--right {
+  align-items: flex-end;
+}
+
+.kf-special-bar__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kf-special-bar--right .kf-special-bar__row {
+  flex-direction: row-reverse;
+}
+
+.kf-special-bar__label {
+  font-size: 11px;
+  color: var(--kf-ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kf-special-bar__status {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.kf-special-bar__status--ready {
+  color: #6cc24a;
+}
+
+.kf-special-bar__status--reloading {
+  color: #8d9bbf;
+}
+
+.kf-special-bar__track {
+  flex: 1;
+  height: 9px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--kf-border);
+  overflow: hidden;
+}
+
+.kf-special-bar--right .kf-special-bar__track {
+  direction: rtl;
+}
+
+.kf-special-bar__fill {
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+.kf-special-bar__fill--ready {
+  background: linear-gradient(90deg, #6cc24a, #a7e08a);
+}
+
+.kf-special-bar__fill--reloading {
+  background: linear-gradient(90deg, #4a5a8f, #7f8fc2);
+}
+
+.kf-special-bar__key {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--kf-gold);
+  border: 1px solid var(--kf-border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+.kf-mode-select__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+}

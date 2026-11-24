@@ -1,0 +1,84 @@
+:root {
+  --kf-bg-deep: #0b1340;
+  --kf-bg-mid: #1b2a6b;
+  --kf-gold: #f3c969;
+  --kf-gold-soft: #f7dfa0;
+  --kf-ink: #f5f1e6;
+  --kf-ink-dim: #c9c6d8;
+  --kf-border: rgba(243, 201, 105, 0.35);
+  --kf-panel: rgba(8, 14, 42, 0.78);
+  --kf-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+  color: var(--kf-ink);
+  background: radial-gradient(circle at 50% -10%, var(--kf-bg-mid), var(--kf-bg-deep) 70%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--kf-gold-soft);
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+  color: var(--kf-ink-dim);
+}
+
+button {
+  font: inherit;
+}
+
+.kf-scene {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.kf-button {
+  cursor: pointer;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--kf-border);
+  background: var(--kf-bg-mid);
+  color: var(--kf-ink);
+  font-size: 16px;
+}
+
+.kf-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.kf-button--secondary {
+  background: transparent;
+}

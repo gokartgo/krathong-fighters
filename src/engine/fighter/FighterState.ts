@@ -1,0 +1,10 @@
+export type FighterState =
+  | 'idle'
+  | 'walk'
+  | 'jump'
+  | 'fall'
+  | 'attack'
+  | 'special'
+  | 'block'
+  | 'hitstun'
+  | 'ko'

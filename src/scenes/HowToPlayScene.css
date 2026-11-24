@@ -1,0 +1,16 @@
+.kf-how-to-play__columns {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+.kf-how-to-play__columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
